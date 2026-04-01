@@ -10,28 +10,57 @@
   <body>
     <a-scene>
 
+      <!-- Assets (Textures) -->
+      <a-assets>
+        <img id="sunTex" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+        <img id="earthTex" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/earth.jpg">
+        <img id="marsTex" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/mars.jpg">
+        <img id="jupiterTex" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/jupiter.jpg">
+        <img id="moonTex" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/moon.jpg">
+      </a-assets>
+
       <!-- Background -->
       <a-sky color="black"></a-sky>
 
-      <!-- Sun (CLEAR COLOR CHANGE) -->
+      <!-- Sun -->
       <a-sphere 
         position="0 1 -3" 
         radius="1" 
-        color="yellow"
-        animation="property: color; to: red; dir: alternate; dur: 500; loop: true">
+        src="#sunTex"
+        animation="property: color; to: orange; dir: alternate; dur: 1000; loop: true">
       </a-sphere>
 
+      <!-- MERCURY -->
+      <a-entity position="0 1 -3"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
+        <a-sphere position="1.5 0 0" radius="0.2" color="gray"></a-sphere>
+      </a-entity>
+
+      <!-- EARTH -->
+      <a-entity position="0 1 -3"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
+        <a-sphere position="2.5 0 0" radius="0.35" src="#earthTex"></a-sphere>
+      </a-entity>
+
+      <!-- MARS -->
+      <a-entity position="0 1 -3"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
+        <a-sphere position="3.5 0 0" radius="0.3" src="#marsTex"></a-sphere>
+      </a-entity>
+
+      <!-- JUPITER -->
+      <a-entity position="0 1 -3"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
+        <a-sphere position="5 0 0" radius="0.6" src="#jupiterTex"></a-sphere>
+      </a-entity>
+
       <!-- Camera -->
-      <a-entity position="0 2 5">
+      <a-entity position="0 2 6">
         <a-camera wasd-controls look-controls></a-camera>
       </a-entity>
 
       <!-- Light -->
-      <a-light 
-        type="point" 
-        position="0 3 3" 
-        intensity="2">
-      </a-light>
+      <a-light type="point" position="0 3 3" intensity="2"></a-light>
 
     </a-scene>
   </body>
