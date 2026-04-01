@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Solar System</title>
+    <title>Solar System - Final</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
   </head>
 
   <body>
     <a-scene>
 
-      <!-- Assets (WORKING TEXTURES) -->
+      <!-- TEXTURES -->
       <a-assets>
         <img id="earth" src="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg">
         <img id="mars" src="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/mars_1024.jpg">
@@ -17,10 +17,10 @@
         <img id="stars" src="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/galaxy_starfield.png">
       </a-assets>
 
-      <!-- STAR BACKGROUND -->
+      <!-- SPACE BACKGROUND -->
       <a-sky src="#stars"></a-sky>
 
-      <!-- SUN (bright + animated) -->
+      <!-- SUN -->
       <a-sphere 
         position="0 1 -3" 
         radius="1" 
@@ -31,34 +31,51 @@
 
       <!-- MERCURY -->
       <a-entity position="0 1 -3"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
-        <a-sphere position="1.5 0 0" radius="0.2" color="gray"></a-sphere>
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
+        <a-sphere position="1.5 0 0" radius="0.2" color="gray"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 1000">
+        </a-sphere>
       </a-entity>
 
       <!-- EARTH -->
       <a-entity position="0 1 -3"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
-        <a-sphere position="2.5 0 0" radius="0.35" src="#earth"></a-sphere>
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
+        <a-sphere position="2.5 0 0" radius="0.35" src="#earth"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
+        </a-sphere>
       </a-entity>
 
       <!-- MARS -->
       <a-entity position="0 1 -3"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
-        <a-sphere position="3.5 0 0" radius="0.3" src="#mars"></a-sphere>
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
+        <a-sphere position="3.5 0 0" radius="0.3" src="#mars"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 2500">
+        </a-sphere>
       </a-entity>
 
       <!-- JUPITER -->
       <a-entity position="0 1 -3"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
-        <a-sphere position="5 0 0" radius="0.6" src="#jupiter"></a-sphere>
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
+        <a-sphere position="5 0 0" radius="0.6" src="#jupiter"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+        </a-sphere>
+
+        <!-- SATURN-LIKE RING (bonus effect) -->
+        <a-ring position="5 0 0"
+          rotation="90 0 0"
+          radius-inner="0.7"
+          radius-outer="1"
+          color="lightyellow">
+        </a-ring>
+
       </a-entity>
 
-      <!-- Camera -->
+      <!-- CAMERA -->
       <a-entity position="0 2 6">
         <a-camera wasd-controls look-controls></a-camera>
       </a-entity>
 
-      <!-- Light -->
+      <!-- LIGHT -->
       <a-light type="point" position="0 3 3" intensity="2"></a-light>
 
     </a-scene>
