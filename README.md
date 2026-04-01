@@ -1,8 +1,10 @@
-﻿# IEEE CCWC - 2026
+﻿# Solar System Simulation (A-Frame)
 ##
-## UNLV University of Nevada, Las Vegas
-#  https://ieee-ccwc.org/
+## Live Demo
+#  [https://ieee-ccwc.org/](https://pragunggupta-spec.github.io/VR-MINI-Testing-/solar.html) 
 #
+## Project Description
+#This project is a 3D solar system simulation built using A-Frame (WebVR framework). It demonstrates the Sun and four planets orbiting around it with realistic motion and textures.
 
 > git clone https://github.com/wonder-phil/wonder-phil.github.io <br />
 > In a browser go to wonder-phil.github.io
