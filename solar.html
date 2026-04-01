@@ -9,26 +9,15 @@
 <body>
 <a-scene>
 
-  <!-- TEXTURES (LOCAL FILES) -->
-  <a-assets>
-    <img id="earthTex" src="Earth.png">
-    <img id="marsTex" src="Mars.png">
-    <img id="jupiterTex" src="Jupiter.png">
-    <img id="neptuneTex" src="Neptune.png">
-    <img id="saturnTex" src="Saturn.png">
-    <img id="sunTex" src="Sun.png">
-  </a-assets>
-
-  <!-- SPACE -->
+  <!-- SPACE BACKGROUND -->
   <a-sky color="black"></a-sky>
 
   <!-- SUN -->
   <a-sphere position="0 1 -5" radius="1"
-    src="#sunTex"
-    material="emissive: yellow; emissiveIntensity: 2">
+    material="src: Sun.png; emissive: yellow; emissiveIntensity: 2">
   </a-sphere>
 
-  <!-- MERCURY (keep simple color for safety) -->
+  <!-- MERCURY (color only for stability) -->
   <a-entity position="0 1 -5"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
     <a-sphere position="2 0 0" radius="0.2" color="#aaaaaa"></a-sphere>
@@ -37,25 +26,33 @@
   <!-- EARTH -->
   <a-entity position="0 1 -5"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
-    <a-sphere position="3 0 0" radius="0.35" src="#earthTex"></a-sphere>
+    <a-sphere position="3 0 0" radius="0.35"
+      material="src: Earth.png">
+    </a-sphere>
   </a-entity>
 
   <!-- MARS -->
   <a-entity position="0 1 -5"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
-    <a-sphere position="4.5 0 0" radius="0.3" src="#marsTex"></a-sphere>
+    <a-sphere position="4.5 0 0" radius="0.3"
+      material="src: Mars.png">
+    </a-sphere>
   </a-entity>
 
   <!-- JUPITER -->
   <a-entity position="0 1 -5"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
-    <a-sphere position="6.5 0 0" radius="0.6" src="#jupiterTex"></a-sphere>
+    <a-sphere position="6.5 0 0" radius="0.6"
+      material="src: Jupiter.png">
+    </a-sphere>
   </a-entity>
 
   <!-- SATURN -->
   <a-entity position="0 1 -5"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
-    <a-sphere position="8.5 0 0" radius="0.5" src="#saturnTex"></a-sphere>
+    <a-sphere position="8.5 0 0" radius="0.5"
+      material="src: Saturn.png">
+    </a-sphere>
 
     <!-- RING -->
     <a-ring position="8.5 0 0"
@@ -69,7 +66,9 @@
   <!-- NEPTUNE -->
   <a-entity position="0 1 -5"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 12000">
-    <a-sphere position="10.5 0 0" radius="0.45" src="#neptuneTex"></a-sphere>
+    <a-sphere position="10.5 0 0" radius="0.45"
+      material="src: Neptune.png">
+    </a-sphere>
   </a-entity>
 
   <!-- CAMERA -->
