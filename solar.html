@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Solar System Final</title>
+    <title>Solar System</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
   </head>
 
   <body>
     <a-scene>
 
-      <!-- ONLY EARTH TEXTURE -->
+      <!-- EARTH TEXTURE ONLY -->
       <a-assets>
         <img id="earthTex" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/earth.jpg">
       </a-assets>
@@ -22,19 +22,19 @@
         position="0 1 -5" 
         radius="1" 
         color="yellow"
-        material="emissive: yellow; emissiveIntensity: 2"
+        material="emissive: yellow"
         animation="property: scale; to: 1.1 1.1 1.1; dir: alternate; dur: 1000; loop: true">
       </a-sphere>
 
       <!-- MERCURY -->
       <a-entity position="0 1 -5"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 2000">
-        <a-sphere position="2 0 0" radius="0.2" color="gray"
+        <a-sphere position="2 0 0" radius="0.2" color="#aaaaaa"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 1000">
         </a-sphere>
       </a-entity>
 
-      <!-- EARTH (TEXTURE) -->
+      <!-- EARTH -->
       <a-entity position="0 1 -5"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
         <a-sphere position="3 0 0" radius="0.35" src="#earthTex"
@@ -45,7 +45,7 @@
       <!-- MARS -->
       <a-entity position="0 1 -5"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
-        <a-sphere position="4.5 0 0" radius="0.3" color="red"
+        <a-sphere position="4.5 0 0" radius="0.3" color="#ff4500"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 2500">
         </a-sphere>
       </a-entity>
@@ -53,7 +53,7 @@
       <!-- JUPITER -->
       <a-entity position="0 1 -5"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
-        <a-sphere position="6.5 0 0" radius="0.6" color="orange"
+        <a-sphere position="6.5 0 0" radius="0.6" color="#d2b48c"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
         </a-sphere>
 
@@ -62,7 +62,7 @@
           rotation="90 0 0"
           radius-inner="0.8"
           radius-outer="1.2"
-          color="lightyellow">
+          color="#f5deb3">
         </a-ring>
       </a-entity>
 
