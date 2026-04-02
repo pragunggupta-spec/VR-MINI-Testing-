@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +10,14 @@
 <body>
 <a-scene fog="type: exponential; color: #cccccc; density: 0.02">
 
-  <!-- ASSETS -->
+  <!-- Background Image -->
   <a-assets>
     <img id="forestImg" src="forest.jpg">
   </a-assets>
 
-  <!-- FOREST BACKGROUND -->
   <a-sky src="#forestImg"></a-sky>
 
-  <!-- GROUND -->
+  <!-- Ground -->
   <a-plane 
     rotation="-90 0 0" 
     width="50" 
@@ -25,11 +25,11 @@
     color="#2e7d32">
   </a-plane>
 
-  <!-- LIGHTING -->
+  <!-- Lights -->
   <a-light type="ambient" intensity="0.7"></a-light>
   <a-light type="directional" position="2 5 3" intensity="0.8"></a-light>
 
-  <!-- CAMERA -->
+  <!-- Camera -->
   <a-entity position="0 1.6 5">
     <a-camera wasd-controls look-controls></a-camera>
   </a-entity>
