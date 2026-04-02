@@ -8,47 +8,30 @@
 </head>
 
 <body>
-<a-scene>
+<a-scene fog="type: exponential; color: #cccccc; density: 0.02">
 
-  <!-- SKY -->
-  <a-sky color="#87CEEB"></a-sky>
+  <!-- ASSETS -->
+  <a-assets>
+    <img id="forestImg" src="forest.jpg">
+  </a-assets>
+
+  <!-- FOREST BACKGROUND -->
+  <a-sky src="#forestImg"></a-sky>
 
   <!-- GROUND -->
   <a-plane 
     rotation="-90 0 0" 
     width="50" 
     height="50" 
-    color="#228B22">
+    color="#2e7d32">
   </a-plane>
 
-  <!-- LIGHT -->
-  <a-light type="directional" position="0 10 5" intensity="1"></a-light>
-
-  <!-- TREE 1 -->
-  <a-cylinder position="-3 1 -5" radius="0.2" height="2" color="#8B4513"></a-cylinder>
-  <a-cone position="-3 3 -5" radius-bottom="1" height="2" color="green"></a-cone>
-
-  <!-- TREE 2 -->
-  <a-cylinder position="2 1 -6" radius="0.2" height="2" color="#8B4513"></a-cylinder>
-  <a-cone position="2 3 -6" radius-bottom="1" height="2" color="green"></a-cone>
-
-  <!-- TREE 3 -->
-  <a-cylinder position="5 1 -4" radius="0.2" height="2" color="#8B4513"></a-cylinder>
-  <a-cone position="5 3 -4" radius-bottom="1" height="2" color="green"></a-cone>
-
-  <!-- TREE 4 -->
-  <a-cylinder position="-6 1 -7" radius="0.2" height="2" color="#8B4513"></a-cylinder>
-  <a-cone position="-6 3 -7" radius-bottom="1" height="2" color="green"></a-cone>
-
-  <!-- EXTRA TREES -->
-  <a-cylinder position="0 1 -8" radius="0.2" height="2" color="#8B4513"></a-cylinder>
-  <a-cone position="0 3 -8" radius-bottom="1" height="2" color="green"></a-cone>
-
-  <a-cylinder position="4 1 -9" radius="0.2" height="2" color="#8B4513"></a-cylinder>
-  <a-cone position="4 3 -9" radius-bottom="1" height="2" color="green"></a-cone>
+  <!-- LIGHTING -->
+  <a-light type="ambient" intensity="0.7"></a-light>
+  <a-light type="directional" position="2 5 3" intensity="0.8"></a-light>
 
   <!-- CAMERA -->
-  <a-entity position="0 2 5">
+  <a-entity position="0 1.6 5">
     <a-camera wasd-controls look-controls></a-camera>
   </a-entity>
 
